@@ -1,0 +1,65 @@
+# Configuración de optimización de rendimiento
+# Estos flags mejoran velocidad y reducen consumo de RAM
+
+# === OPTIMIZACIONES DEL COMPILADOR ===
+is_debug = false
+is_official_build = true
+is_component_build = false  # Builds monolíticos son más rápidos
+
+# === OPTIMIZACIONES DE CÓDIGO ===
+use_thin_lto = true  # Link-Time Optimization
+chrome_pgo_phase = 2  # Profile-Guided Optimization
+optimize_webui = true
+
+# === REDUCCIÓN DE TAMAÑO ===
+symbol_level = 0  # Sin símbolos de debug
+blink_symbol_level = 0
+remove_webcore_debug_symbols = true
+exclude_unwind_tables = true
+
+# === V8 (JavaScript Engine) ===
+v8_enable_lazy_source_positions = true
+v8_enable_gdbjit = false
+v8_enable_i18n_support = true
+v8_enable_fast_mksnapshot = true
+
+# === MEMORIA ===
+use_allocator_shim = true
+use_partition_alloc = true  # Mejor gestión de memoria
+
+# === CODECS Y MEDIA ===
+proprietary_codecs = true
+ffmpeg_branding = "Chrome"  # Soporte completo de codecs
+enable_av1_decoder = true
+enable_dav1d_decoder = true  # Decoder AV1 optimizado
+
+# === GRÁFICOS ===
+use_vulkan = true  # API gráfica moderna (si disponible)
+enable_vulkan = true
+use_dawn = true  # WebGPU
+
+# === NETWORK ===
+enable_quic = true  # HTTP/3
+use_system_ssl = false  # Usar BoringSSL incluido
+
+# === FEATURES OPCIONALES ===
+enable_nacl = false  # Native Client (deprecado, ahorra RAM)
+enable_nacl_nonsfi = false
+enable_widevine = true  # DRM para Netflix, etc.
+bundle_widevine_cdm = true
+
+# === EXTENSIONES ===
+enable_extensions = true
+enable_pdf = true
+
+# === PRINTING ===
+enable_basic_printing = true
+enable_print_preview = true
+
+# === OPTIMIZACIONES ESPECÍFICAS ===
+# Windows
+visual_studio_version = "2022"
+use_lld = true  # Linker más rápido
+
+# Multi-thread
+symbol_level_2_for_component_builds = false

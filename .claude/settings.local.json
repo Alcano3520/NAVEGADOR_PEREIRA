@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(powershell -Command \"python --version\")",
+      "Bash(git --version:*)",
+      "Bash(powershell -Command \"Test-Path ''C:\\depot_tools''\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File CHECK_REQUIREMENTS.ps1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File DEMO_QUICK.ps1)",
+      "Bash(cmd /c INSTALAR.bat)",
+      "Bash(powershell -ExecutionPolicy Bypass -File scriptsinstalar.ps1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\Mis_Proyectos\\navegador_pereira\\NavegadorPereira-Portable\\scripts\\instalar.ps1\")",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

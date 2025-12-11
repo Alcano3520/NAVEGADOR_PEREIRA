@@ -1,0 +1,45 @@
+# Dominios bloqueados para privacidad
+# Este archivo lista dominios de rastreo y telemetria
+
+# Google Telemetria
+clients1.google.com
+clients2.google.com
+clients3.google.com
+clients4.google.com
+clients5.google.com
+clients6.google.com
+
+# Google Analytics
+www.google-analytics.com
+ssl.google-analytics.com
+analytics.google.com
+
+# DoubleClick (Ads)
+doubleclick.net
+stats.g.doubleclick.net
+
+# SafeBrowsing
+safebrowsing.google.com
+sb-ssl.google.com
+
+# Crash Reporting
+clients2.google.com/cr/report
+
+# Update Check
+update.googleapis.com
+
+# Otros rastreadores comunes
+googleadservices.com
+googlesyndication.com
+googletagmanager.com
+
+# Facebook tracking
+pixel.facebook.com
+connect.facebook.net
+
+# Twitter tracking
+analytics.twitter.com
+
+# Microsoft telemetry
+telemetry.microsoft.com
+watson.telemetry.microsoft.com

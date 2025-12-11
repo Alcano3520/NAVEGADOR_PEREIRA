@@ -1,0 +1,11 @@
+# Ignorar binarios y perfil de usuario (muy grandes)
+chromium/
+profile/
+
+# Ignorar temporales
+chromium-temp.zip
+chromium-update.zip
+chromium-backup/
+
+# Ignorar logs
+*.log

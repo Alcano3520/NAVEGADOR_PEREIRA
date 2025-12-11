@@ -1,0 +1,52 @@
+# Configuración GN para deshabilitar servicios de Google
+# Este archivo se usa durante la compilación de Chromium
+
+# === SERVICIOS DE GOOGLE ===
+enable_google_now = false
+enable_hangout_services_extension = false
+enable_one_click_signin = false
+enable_service_discovery = false
+enable_google_assistant = false
+
+# === TELEMETRÍA Y RASTREO ===
+enable_reporting = false
+safe_browsing_mode = 0  # 0 = deshabilitado, 1 = local, 2 = Google
+enable_supervised_users = false
+enable_extensions_core = true
+
+# === SINCRONIZACIÓN ===
+enable_extensions = true
+enable_plugins = true
+enable_plugin_installation = false
+
+# === BÚSQUEDA Y SUGERENCIAS ===
+enable_omnibox_suggest = false  # Desactiva sugerencias de búsqueda
+enable_search_provider_logos = false
+
+# === PRECARGA Y PREFETCH ===
+enable_dns_prefetch = false
+enable_preconnect = false
+
+# === APIs OPCIONALES ===
+use_official_google_api_keys = false
+google_api_key = ""
+google_default_client_id = ""
+google_default_client_secret = ""
+
+# === BRANDING ===
+is_chrome_branded = false
+use_unofficial_version_number = true
+
+# === OPTIMIZACIONES DE PRIVACIDAD ===
+enable_background_mode = false  # Sin procesos en segundo plano
+enable_print_preview = true
+enable_basic_printing = true
+
+# === WEBRTC ===
+# Deshabilitar WebRTC leak de IP (opcional, puede romper videollamadas)
+rtc_use_h264 = false
+proprietary_codecs = true  # Para Netflix, Spotify, etc.
+
+# === CHROMOTING (Remote Desktop) ===
+enable_remoting = false
+enable_remote_desktop = false

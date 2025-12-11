@@ -1,0 +1,112 @@
+{
+  "homepage": "about:blank",
+  "homepage_is_newtabpage": false,
+  "browser": {
+    "check_default_browser": false,
+    "should_reset_check_default_browser": false
+  },
+  "distribution": {
+    "skip_first_run_ui": true,
+    "import_bookmarks": false,
+    "import_history": false,
+    "import_search_engine": false,
+    "suppress_first_run_bubble": true,
+    "do_not_create_desktop_shortcut": false,
+    "do_not_create_quick_launch_shortcut": false,
+    "do_not_launch_chrome": false,
+    "do_not_register_for_update_launch": false,
+    "make_chrome_default": false,
+    "make_chrome_default_for_user": false,
+    "system_level": false,
+    "verbose_logging": false
+  },
+  "profile": {
+    "default_content_setting_values": {
+      "cookies": 1,
+      "images": 1,
+      "javascript": 1,
+      "plugins": 1,
+      "popups": 2,
+      "geolocation": 2,
+      "notifications": 2,
+      "auto_select_certificate": 2,
+      "fullscreen": 1,
+      "mouselock": 2,
+      "mixed_script": 2,
+      "media_stream": 2,
+      "media_stream_mic": 2,
+      "media_stream_camera": 2,
+      "protocol_handlers": 2,
+      "ppapi_broker": 2,
+      "automatic_downloads": 2,
+      "midi_sysex": 2,
+      "push_messaging": 2,
+      "ssl_cert_decisions": 2,
+      "metro_switch_to_desktop": 1,
+      "protected_media_identifier": 2,
+      "app_banner": 2,
+      "site_engagement": 1,
+      "durable_storage": 2
+    },
+    "block_third_party_cookies": true,
+    "content_settings": {
+      "pattern_pairs": {}
+    }
+  },
+  "dns_prefetching": {
+    "enabled": false
+  },
+  "alternate_error_pages": {
+    "enabled": false
+  },
+  "search": {
+    "suggest_enabled": false
+  },
+  "safebrowsing": {
+    "enabled": false,
+    "enhanced": false
+  },
+  "net": {
+    "network_prediction_options": 2
+  },
+  "privacy": {
+    "prefetch": {
+      "enabled": false
+    }
+  },
+  "translate": {
+    "enabled": false
+  },
+  "signin": {
+    "allowed": false,
+    "allowed_on_next_startup": false
+  },
+  "bookmark_bar": {
+    "show_on_all_tabs": true
+  },
+  "extensions": {
+    "ui": {
+      "developer_mode": true
+    }
+  },
+  "autofill": {
+    "enabled": false,
+    "profile_enabled": false,
+    "credit_card_enabled": false
+  },
+  "password_manager": {
+    "password_manager_enabled": false
+  },
+  "credentials_enable_service": false,
+  "credentials_enable_autosignin": false,
+  "profile_network_context_service": {
+    "http_cache_enabled": true
+  },
+  "ssl": {
+    "version_min": "tls1.2"
+  },
+  "enable_do_not_track": true,
+  "enable_referrers": false,
+  "enable_encrypted_media": true,
+  "block_all_third_party_cookies": true
+}

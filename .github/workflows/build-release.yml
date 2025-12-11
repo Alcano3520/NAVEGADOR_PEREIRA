@@ -1,0 +1,161 @@
+name: Build Release
+
+# Workflow para compilar versiones release del navegador
+# Se ejecuta manualmente o cuando hay un nuevo tag
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to build (e.g., 1.0.0)'
+        required: true
+        type: string
+
+jobs:
+  build-windows:
+    name: Build for Windows
+    runs-on: windows-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install depot_tools
+        shell: powershell
+        run: |
+          git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+          echo "${{ github.workspace }}\depot_tools" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
+      - name: Cache Chromium
+        uses: actions/cache@v3
+        with:
+          path: chromium
+          key: chromium-windows-${{ github.sha }}
+          restore-keys: |
+            chromium-windows-
+
+      - name: Sync Chromium
+        shell: powershell
+        run: |
+          .\scripts\sync-chromium.ps1
+
+      - name: Build
+        shell: powershell
+        run: |
+          .\scripts\build.ps1
+
+      - name: Package
+        shell: powershell
+        run: |
+          # Crear archivo ZIP con el navegador
+          Compress-Archive -Path chromium\src\out\Release\* -DestinationPath Navegador-Pereira-Windows-x64.zip
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: navegador-pereira-windows
+          path: Navegador-Pereira-Windows-x64.zip
+
+  build-linux:
+    name: Build for Linux
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            git curl python3 lsb-release sudo \
+            build-essential
+
+      - name: Install depot_tools
+        run: |
+          git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+          echo "${{ github.workspace }}/depot_tools" >> $GITHUB_PATH
+
+      - name: Cache Chromium
+        uses: actions/cache@v3
+        with:
+          path: chromium
+          key: chromium-linux-${{ github.sha }}
+          restore-keys: |
+            chromium-linux-
+
+      - name: Sync Chromium
+        run: |
+          chmod +x scripts/sync-chromium.sh
+          ./scripts/sync-chromium.sh
+
+      - name: Build
+        run: |
+          chmod +x scripts/build.sh
+          ./scripts/build.sh
+
+      - name: Package
+        run: |
+          cd chromium/src/out/Release
+          tar -czf ../../../../Navegador-Pereira-Linux-x64.tar.gz *
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: navegador-pereira-linux
+          path: Navegador-Pereira-Linux-x64.tar.gz
+
+  create-release:
+    name: Create GitHub Release
+    needs: [build-windows, build-linux]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+
+    steps:
+      - name: Download Windows Build
+        uses: actions/download-artifact@v3
+        with:
+          name: navegador-pereira-windows
+
+      - name: Download Linux Build
+        uses: actions/download-artifact@v3
+        with:
+          name: navegador-pereira-linux
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            Navegador-Pereira-Windows-x64.zip
+            Navegador-Pereira-Linux-x64.tar.gz
+          body: |
+            ## Navegador Pereira ${{ github.ref_name }}
+
+            ### 🔒 Características de Seguridad
+            - Basado en Chromium upstream actualizado
+            - Sin telemetría de Google
+            - Sin rastreadores integrados
+
+            ### 📥 Descargas
+            - **Windows x64**: Navegador-Pereira-Windows-x64.zip
+            - **Linux x64**: Navegador-Pereira-Linux-x64.tar.gz
+
+            ### ⚠️ Notas Importantes
+            Este es un build automático. Verifica la integridad antes de usar.
+
+            ### 📋 Checksums
+            Ver archivos adjuntos para SHA256.
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

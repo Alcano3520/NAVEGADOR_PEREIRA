@@ -1,0 +1,76 @@
+# Navegador Pereira - .gitignore
+
+# Chromium source (muy grande para Git)
+chromium/
+
+# Builds
+out/
+*.ninja
+*.ninja_deps
+*.ninja_log
+
+# Logs
+*.log
+sync-*.log
+build-*.log
+audit-*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Compilación
+*.o
+*.a
+*.lib
+*.exe
+*.dll
+*.dylib
+
+# Temporal
+tmp/
+temp/
+*.tmp
+*.bak
+
+# depot_tools (si está en el proyecto)
+depot_tools/
+
+# Certificados y claves (nunca commitear)
+*.pem
+*.key
+*.crt
+*.p12
+
+# Reportes de seguridad con información sensible
+private-audit-*.txt
+
+# Archives
+*.zip
+*.tar.gz
+*.7z
+*.dmg
+*.pkg
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Build artifacts específicos
+chrome.manifest
+version.json
