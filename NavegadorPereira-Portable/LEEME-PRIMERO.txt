@@ -1,0 +1,94 @@
+╔═══════════════════════════════════════════════════════════╗
+║   NAVEGADOR PEREIRA - INSTRUCCIONES DE INSTALACION       ║
+║                  LEEME PRIMERO                            ║
+╚═══════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════
+  METODO 1: DESCARGA MANUAL (RECOMENDADO - MAS RAPIDO)
+═══════════════════════════════════════════════════════════
+
+1. Abre tu navegador actual (Chrome, Edge, etc.)
+
+2. Ve a esta página:
+   https://chromium.woolyss.com/download/
+
+3. Busca la sección "Chromium 64-bit (Windows)"
+
+4. Haz clic en el enlace de descarga
+   (archivo ZIP de ~200MB)
+
+5. Cuando termine la descarga, EXTRAE el ZIP
+
+6. Dentro del ZIP encontrarás una carpeta "chrome-win"
+
+7. COPIA toda esa carpeta "chrome-win" aquí:
+   C:\Mis_Proyectos\navegador_pereira\NavegadorPereira-Portable\
+
+8. RENOMBRA la carpeta "chrome-win" a "chromium"
+
+9. Verifica que tengas este archivo:
+   C:\Mis_Proyectos\navegador_pereira\NavegadorPereira-Portable\chromium\chrome.exe
+
+10. Doble clic en: Pereira.bat
+
+¡LISTO! El navegador se abrirá con privacidad
+
+
+═══════════════════════════════════════════════════════════
+  METODO 2: DESCARGA AUTOMATICA (MAS LENTA)
+═══════════════════════════════════════════════════════════
+
+1. Doble clic en: INSTALAR-SIMPLE.bat
+
+2. Presiona ENTER
+
+3. Espera 5-10 minutos (descarga 200MB)
+
+4. Cuando termine, ejecuta: Pereira.bat
+
+
+═══════════════════════════════════════════════════════════
+  VERIFICAR QUE ESTA BIEN INSTALADO
+═══════════════════════════════════════════════════════════
+
+Debe existir este archivo:
+C:\Mis_Proyectos\navegador_pereira\NavegadorPereira-Portable\chromium\chrome.exe
+
+Si NO existe, la instalación falló.
+Usa el METODO 1 (manual).
+
+
+═══════════════════════════════════════════════════════════
+  DESPUES DE INSTALAR
+═══════════════════════════════════════════════════════════
+
+Para abrir el navegador:
+→ Doble clic en: Pereira.bat
+
+Para actualizar (mensual):
+→ Doble clic en: ACTUALIZAR.bat
+
+Para mover a USB:
+→ Copia TODA la carpeta NavegadorPereira-Portable
+
+
+═══════════════════════════════════════════════════════════
+  ALTERNATIVA RAPIDA: UNGOOGLED CHROMIUM
+═══════════════════════════════════════════════════════════
+
+Si quieres algo ya listo sin descargar tanto:
+
+1. Ve a: https://github.com/ungoogled-software/ungoogled-chromium/releases
+
+2. Descarga la última versión Windows
+
+3. Es similar a lo que creamos aquí
+
+Pero nuestro proyecto tiene scripts de actualización automática
+y configuraciones personalizadas.
+
+
+═══════════════════════════════════════════════════════════
+
+¿Problemas? Lee: COMO-USAR.txt
