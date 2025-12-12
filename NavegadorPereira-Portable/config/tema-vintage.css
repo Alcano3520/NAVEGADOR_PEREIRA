@@ -1,0 +1,163 @@
+/* NAVEGADOR PEREIRA - TEMA VINTAGE OSCURO */
+/* Estilo retro con colores oscuros */
+
+:root {
+  /* Paleta vintage oscura */
+  --vintage-bg: #1a1a1a;
+  --vintage-surface: #2d2d2d;
+  --vintage-border: #4a4a4a;
+  --vintage-text: #e8d4b0;
+  --vintage-accent: #d4a574;
+  --vintage-highlight: #f5e6d3;
+  --vintage-error: #d98880;
+  --vintage-success: #82b67f;
+}
+
+/* Fondo general */
+body, html {
+  background-color: var(--vintage-bg) !important;
+  color: var(--vintage-text) !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+/* Nueva pestaña */
+#most-visited,
+.mv-tile,
+.mv-empty-tile {
+  background-color: var(--vintage-surface) !important;
+  border: 1px solid var(--vintage-border) !important;
+  color: var(--vintage-text) !important;
+}
+
+/* Barra de direcciones */
+#omnibox,
+.omnibox,
+input[type="text"],
+input[type="url"] {
+  background-color: var(--vintage-surface) !important;
+  color: var(--vintage-highlight) !important;
+  border: 2px solid var(--vintage-border) !important;
+  border-radius: 2px !important;
+}
+
+/* Botones */
+button,
+.button,
+input[type="button"],
+input[type="submit"] {
+  background-color: var(--vintage-surface) !important;
+  color: var(--vintage-accent) !important;
+  border: 1px solid var(--vintage-border) !important;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+button:hover,
+.button:hover {
+  background-color: var(--vintage-accent) !important;
+  color: var(--vintage-bg) !important;
+}
+
+/* Menús */
+.menu,
+.context-menu,
+.dropdown {
+  background-color: var(--vintage-surface) !important;
+  border: 2px solid var(--vintage-border) !important;
+  color: var(--vintage-text) !important;
+}
+
+/* Scrollbars vintage */
+::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vintage-bg) !important;
+  border: 1px solid var(--vintage-border) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vintage-accent) !important;
+  border: 1px solid var(--vintage-border) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vintage-highlight) !important;
+}
+
+/* Tabs estilo vintage */
+.tab,
+.tab-strip,
+.tabstrip {
+  background-color: var(--vintage-bg) !important;
+  border-bottom: 2px solid var(--vintage-border) !important;
+}
+
+.tab-active,
+.tab.selected {
+  background-color: var(--vintage-surface) !important;
+  border: 1px solid var(--vintage-accent) !important;
+  color: var(--vintage-highlight) !important;
+}
+
+/* Links estilo vintage */
+a, a:link {
+  color: var(--vintage-accent) !important;
+  text-decoration: underline !important;
+}
+
+a:visited {
+  color: #b89968 !important;
+}
+
+a:hover {
+  color: var(--vintage-highlight) !important;
+}
+
+/* Settings y páginas internas */
+.settings-page,
+chrome://settings,
+chrome://extensions {
+  background-color: var(--vintage-bg) !important;
+}
+
+/* Headers vintage */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--vintage-accent) !important;
+  font-family: 'Courier New', monospace !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  border-bottom: 2px solid var(--vintage-border) !important;
+  padding-bottom: 5px !important;
+}
+
+/* Inputs */
+input, textarea, select {
+  background-color: var(--vintage-surface) !important;
+  color: var(--vintage-text) !important;
+  border: 1px solid var(--vintage-border) !important;
+  border-radius: 0 !important;
+}
+
+/* Cards y contenedores */
+.card,
+.container,
+.panel {
+  background-color: var(--vintage-surface) !important;
+  border: 2px solid var(--vintage-border) !important;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.3) !important;
+}
+
+/* Checkboxes y radios estilo vintage */
+input[type="checkbox"],
+input[type="radio"] {
+  border: 2px solid var(--vintage-accent) !important;
+}
+
+/* Efectos de sombra vintage */
+.shadow {
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.5) !important;
+}

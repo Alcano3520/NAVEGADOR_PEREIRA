@@ -1,4 +1,4 @@
-# Flags de Chromium para privacidad y rendimiento
+# Flags de Chromium para privacidad, rendimiento y tema vintage
 # Estos se aplican automaticamente al ejecutar Pereira.bat
 
 # PRIVACIDAD
@@ -10,6 +10,9 @@
 --no-first-run
 --no-default-browser-check
 --disable-external-intent-requests
+--bwsi
+--disable-logging
+--disable-breakpad
 
 # DNS Y RED
 --disable-domain-reliability
@@ -19,6 +22,16 @@
 # TRACKING
 --enable-features=EnableTLS13EarlyData
 --force-enable-metrics-reporting=0
+--enable-do-not-track
+
+# SUPRIMIR MENSAJE API KEYS
+--simulate-outdated-no-au="Tue, 31 Dec 2099 23:59:59 GMT"
+
+# TEMA OSCURO VINTAGE
+--force-dark-mode
+--enable-features=WebUIDarkMode
+--enable-features=WebContentsForceDark
+--enable-features=CSSColorSchemeUARendering
 
 # RENDIMIENTO
 --enable-features=ParallelDownloading
@@ -35,4 +48,3 @@
 
 # EXPERIMENTAL (comenta si causan problemas)
 --enable-quic
---enable-features=WebUIDarkMode

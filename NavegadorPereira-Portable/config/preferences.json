@@ -6,10 +6,27 @@
   },
   "browser": {
     "check_default_browser": false,
-    "show_home_button": true
+    "show_home_button": true,
+    "theme": {
+      "color_scheme": 1,
+      "user_color": "#1a1a1a",
+      "system_theme": 1
+    }
   },
   "bookmark_bar": {
     "show_on_all_tabs": true
+  },
+  "extensions": {
+    "theme": {
+      "use_system": false,
+      "system_theme": 1,
+      "color": 0
+    }
+  },
+  "ntp": {
+    "custom_background_dict": {
+      "background_color": "#1a1a1a"
+    }
   },
   "profile": {
     "default_content_setting_values": {

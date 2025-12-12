@@ -1,0 +1,164 @@
+╔═══════════════════════════════════════════════════════════╗
+║     NAVEGADOR PEREIRA - TEMA VINTAGE OSCURO              ║
+╚═══════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════
+  CARACTERÍSTICAS DEL TEMA VINTAGE
+═══════════════════════════════════════════════════════════
+
+✅ TEMA OSCURO AUTOMÁTICO
+   - Modo oscuro forzado en todo el navegador
+   - Colores vintage: marrones, dorados, cremas
+   - Estilo retro/terminal
+
+✅ NUEVA PESTAÑA PERSONALIZADA
+   - Diseño vintage con efectos de scanline
+   - Logo "PEREIRA" con efecto glow
+   - Decoraciones de esquinas estilo art deco
+   - Buscador integrado (DuckDuckGo)
+   - Enlaces rápidos personalizados
+
+✅ COLORES VINTAGE
+   - Fondo: #1a1a1a (negro vintage)
+   - Superficie: #2d2d2d (gris oscuro)
+   - Texto: #e8d4b0 (crema antiguo)
+   - Acento: #d4a574 (dorado vintage)
+   - Bordes: #4a4a4a (gris medio)
+
+✅ TIPOGRAFÍA
+   - Courier New (estilo terminal/typewriter)
+   - Letras mayúsculas y espaciado amplio
+   - Efecto vintage/retro
+
+
+═══════════════════════════════════════════════════════════
+  MENSAJE API KEYS SOLUCIONADO
+═══════════════════════════════════════════════════════════
+
+✅ El mensaje "Faltan las claves de API de Google" ya NO aparece
+
+Cómo se solucionó:
+1. Flag --simulate-outdated-no-au suprime el mensaje
+2. Flag --bwsi (modo invitado) oculta advertencias
+3. Flag --disable-logging desactiva logs innecesarios
+4. archivo master_preferences configura primera ejecución
+
+
+═══════════════════════════════════════════════════════════
+  ARCHIVOS DEL TEMA
+═══════════════════════════════════════════════════════════
+
+config/tema-vintage.css
+   → Estilos CSS para el tema oscuro vintage
+
+config/nueva-pestana.html
+   → Página personalizada para nuevas pestañas
+   → Logo "PEREIRA" animado
+   → Buscador integrado
+
+config/preferences.json
+   → Configuración de tema oscuro
+   → Colores personalizados
+
+chromium/master_preferences
+   → Suprime mensajes de primera ejecución
+   → Configuración inicial del navegador
+
+
+═══════════════════════════════════════════════════════════
+  CÓMO USAR EL TEMA
+═══════════════════════════════════════════════════════════
+
+El tema se activa AUTOMÁTICAMENTE al ejecutar:
+→ Pereira.bat
+
+Flags activos del tema:
+--force-dark-mode                    → Fuerza modo oscuro
+--enable-features=WebUIDarkMode      → UI oscura
+--enable-features=WebContentsForceDark → Contenido oscuro
+
+
+═══════════════════════════════════════════════════════════
+  PERSONALIZAR EL TEMA
+═══════════════════════════════════════════════════════════
+
+CAMBIAR COLORES:
+1. Edita: config/tema-vintage.css
+2. Modifica las variables :root
+3. Guarda y reinicia el navegador
+
+CAMBIAR PÁGINA NUEVA PESTAÑA:
+1. Edita: config/nueva-pestana.html
+2. Modifica HTML/CSS/JavaScript
+3. Guarda y abre nueva pestaña
+
+DESACTIVAR TEMA OSCURO:
+1. Edita: config/flags.txt
+2. Comenta las líneas de "TEMA OSCURO VINTAGE"
+3. Reinicia el navegador
+
+
+═══════════════════════════════════════════════════════════
+  EXTENSIÓN NUEVA PESTAÑA (OPCIONAL)
+═══════════════════════════════════════════════════════════
+
+Para usar nueva-pestana.html como página de inicio:
+
+Opción 1: Extensión New Tab Redirect
+1. Instala desde Chrome Web Store
+2. Configura URL: file:///C:/ruta/config/nueva-pestana.html
+
+Opción 2: Configuración manual
+1. chrome://settings
+2. Al iniciar → Abrir una página específica
+3. Añade ruta a nueva-pestana.html
+
+
+═══════════════════════════════════════════════════════════
+  CAPTURAS DEL TEMA
+═══════════════════════════════════════════════════════════
+
+El tema incluye:
+🎨 Logo "PEREIRA" con efecto glow dorado
+🎨 Fondo degradado oscuro vintage
+🎨 Decoraciones art deco en las esquinas
+🎨 Efecto scanline (línea que se mueve)
+🎨 Scrollbars personalizados vintage
+🎨 Botones estilo retro
+🎨 Tipografía monoespaciada
+
+
+═══════════════════════════════════════════════════════════
+  PALETA DE COLORES COMPLETA
+═══════════════════════════════════════════════════════════
+
+Fondo principal:     #1a1a1a (Negro profundo)
+Fondo degradado:     #2d2020 (Marrón oscuro)
+Superficie:          #2d2d2d (Gris carbón)
+Bordes:              #4a4a4a (Gris medio)
+Texto principal:     #e8d4b0 (Crema vintage)
+Texto acento:        #d4a574 (Dorado antiguo)
+Texto highlight:     #f5e6d3 (Crema claro)
+Enlaces visitados:   #b89968 (Dorado apagado)
+Error:               #d98880 (Rojo suave)
+Success:             #82b67f (Verde suave)
+
+
+═══════════════════════════════════════════════════════════
+  INSPIRACIÓN DEL DISEÑO
+═══════════════════════════════════════════════════════════
+
+Estilo: Terminal retro / Art Deco / Años 20-30
+Influencias:
+- Terminales antiguos de computadora
+- Diseño art deco
+- Estética vintage/steampunk
+- Paleta de colores sepia/marrón
+
+
+═══════════════════════════════════════════════════════════
+
+Versión: 1.0
+Tema: Vintage Oscuro
+Última actualización: 2025-12-11

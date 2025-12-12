@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Pestaña - Navegador Pereira</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2020 100%);
+            font-family: 'Courier New', monospace;
+            color: #e8d4b0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Efecto de textura vintage */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,.05) 2px,
+                    rgba(0,0,0,.05) 4px
+                );
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 40px;
+        }
+
+        .logo {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .logo-text {
+            font-size: 72px;
+            font-weight: bold;
+            color: #d4a574;
+            text-shadow:
+                4px 4px 0 rgba(0,0,0,0.5),
+                0 0 20px rgba(212, 165, 116, 0.3);
+            letter-spacing: 8px;
+            font-family: 'Courier New', monospace;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow:
+                    4px 4px 0 rgba(0,0,0,0.5),
+                    0 0 20px rgba(212, 165, 116, 0.3);
+            }
+            to {
+                text-shadow:
+                    4px 4px 0 rgba(0,0,0,0.5),
+                    0 0 30px rgba(212, 165, 116, 0.6),
+                    0 0 40px rgba(212, 165, 116, 0.4);
+            }
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #b89968;
+            margin-bottom: 50px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            border-top: 2px solid #4a4a4a;
+            border-bottom: 2px solid #4a4a4a;
+            padding: 15px 0;
+            display: inline-block;
+        }
+
+        .search-container {
+            margin: 40px 0;
+        }
+
+        .search-box {
+            width: 600px;
+            max-width: 90vw;
+            padding: 18px 25px;
+            font-size: 16px;
+            font-family: 'Courier New', monospace;
+            background: #2d2d2d;
+            border: 3px solid #4a4a4a;
+            color: #e8d4b0;
+            outline: none;
+            box-shadow:
+                6px 6px 0 rgba(0,0,0,0.4),
+                inset 0 0 10px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+
+        .search-box:focus {
+            border-color: #d4a574;
+            box-shadow:
+                6px 6px 0 rgba(0,0,0,0.4),
+                inset 0 0 10px rgba(0,0,0,0.3),
+                0 0 20px rgba(212, 165, 116, 0.4);
+        }
+
+        .quick-links {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .quick-link {
+            background: #2d2d2d;
+            border: 2px solid #4a4a4a;
+            padding: 20px 30px;
+            text-decoration: none;
+            color: #d4a574;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-link:hover {
+            background: #d4a574;
+            color: #1a1a1a;
+            border-color: #f5e6d3;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.4);
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: #6a6a6a;
+            letter-spacing: 1px;
+        }
+
+        /* Decoración vintage */
+        .corner-decoration {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            border: 3px solid #4a4a4a;
+        }
+
+        .corner-top-left {
+            top: 20px;
+            left: 20px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .corner-top-right {
+            top: 20px;
+            right: 20px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .corner-bottom-left {
+            bottom: 20px;
+            left: 20px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .corner-bottom-right {
+            bottom: 20px;
+            right: 20px;
+            border-left: none;
+            border-top: none;
+        }
+
+        /* Animación de escaneo vintage */
+        @keyframes scan {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(transparent, rgba(212, 165, 116, 0.1), transparent);
+            animation: scan 8s linear infinite;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Decoraciones de esquinas vintage -->
+    <div class="corner-decoration corner-top-left"></div>
+    <div class="corner-decoration corner-top-right"></div>
+    <div class="corner-decoration corner-bottom-left"></div>
+    <div class="corner-decoration corner-bottom-right"></div>
+
+    <!-- Línea de escaneo vintage -->
+    <div class="scanline"></div>
+
+    <div class="container">
+        <div class="logo">
+            <div class="logo-text">PEREIRA</div>
+        </div>
+
+        <div class="subtitle">
+            Navegador Privado y Seguro
+        </div>
+
+        <div class="search-container">
+            <input
+                type="text"
+                class="search-box"
+                placeholder="Buscar en DuckDuckGo..."
+                id="searchBox"
+                autofocus
+            />
+        </div>
+
+        <div class="quick-links">
+            <a href="https://duckduckgo.com" class="quick-link">🔍 DuckDuckGo</a>
+            <a href="https://github.com/Alcano3520/NAVEGADOR_PEREIRA" class="quick-link">📦 GitHub</a>
+            <a href="chrome://settings" class="quick-link">⚙️ Configuración</a>
+            <a href="chrome://extensions" class="quick-link">🧩 Extensiones</a>
+        </div>
+
+        <div class="footer">
+            NAVEGADOR PEREIRA v1.0 • PRIVACIDAD PRIMERO • 2025
+        </div>
+    </div>
+
+    <script>
+        const searchBox = document.getElementById('searchBox');
+
+        searchBox.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && this.value.trim()) {
+                const query = encodeURIComponent(this.value.trim());
+                window.location.href = `https://duckduckgo.com/?q=${query}`;
+            }
+        });
+
+        // Easter egg: Efecto de parpadeo vintage al hacer clic
+        document.body.addEventListener('click', function() {
+            document.body.style.opacity = '0.9';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 50);
+        });
+    </script>
+</body>
+</html>
