@@ -13,7 +13,11 @@
       "Bash(git init:*)",
       "Bash(git config:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Write-Host ''Descargando Chromium...''; Invoke-WebRequest -Uri ''https://download-chromium.appspot.com/dl/Win_x64?type=snapshots'' -OutFile ''chromium-temp.zip'' -UseBasicParsing; Write-Host ''Extrayendo...''; Expand-Archive -Path ''chromium-temp.zip'' -DestinationPath ''.'' -Force; if (Test-Path ''chrome-win'') { if (Test-Path ''chromium'') { Remove-Item ''chromium'' -Recurse -Force }; Move-Item ''chrome-win'' ''chromium'' }; Remove-Item ''chromium-temp.zip'' -Force; Write-Host ''LISTO!''\")"
     ],
     "deny": [],
     "ask": []
