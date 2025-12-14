@@ -26,8 +26,13 @@ if exist "%FLAGS_FILE%" (
     )
 )
 
-REM Ejecutar Chromium con configuraciones de privacidad
+REM Construir ruta absoluta a nueva pestaña
+set "NUEVA_PESTANA=file:///%~dp0config\nueva-pestana.html"
+set "NUEVA_PESTANA=%NUEVA_PESTANA:\=/%"
+
+REM Ejecutar Chromium con configuraciones de privacidad y tema vintage
 start "" "%CHROME_EXE%" ^
+    "%NUEVA_PESTANA%" ^
     --user-data-dir="%PROFILE_DIR%" ^
     --disable-background-networking ^
     --disable-sync ^
