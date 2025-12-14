@@ -1,0 +1,31 @@
+{
+  "distribution": {
+    "skip_first_run_ui": true,
+    "show_welcome_page": false,
+    "import_bookmarks": false,
+    "import_history": false,
+    "import_search_engine": false,
+    "suppress_first_run_bubble": true,
+    "do_not_create_desktop_shortcut": false,
+    "do_not_create_quick_launch_shortcut": false,
+    "do_not_launch_chrome": false,
+    "do_not_register_for_update_launch": false,
+    "make_chrome_default": false,
+    "make_chrome_default_for_user": false,
+    "suppress_first_run_default_browser_prompt": true
+  },
+  "browser": {
+    "has_seen_welcome_page": true,
+    "check_default_browser": false,
+    "show_home_button": true,
+    "custom_chrome_frame": false
+  },
+  "first_run_tabs": [
+    "about:blank"
+  ],
+  "homepage": "about:blank",
+  "homepage_is_newtabpage": false,
+  "session": {
+    "restore_on_startup": 1
+  }
+}
