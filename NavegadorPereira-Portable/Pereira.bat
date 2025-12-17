@@ -42,14 +42,10 @@ start "" "%CHROME_EXE%" ^
     --no-default-browser-check ^
     --dns-prefetch-disable ^
     --disable-domain-reliability ^
-    --enable-features=ParallelDownloading,WebUIDarkMode ^
+    --enable-features=ParallelDownloading,WebUIDarkMode,WebContentsForceDark ^
     --ssl-version-min=tls1.2 ^
     --enable-do-not-track ^
     --force-dark-mode ^
-    --enable-features=WebContentsForceDark ^
-    --bwsi ^
-    --simulate-outdated-no-au="Tue, 31 Dec 2099 23:59:59 GMT" ^
-    --disable-logging ^
-    --disable-breakpad
+    --simulate-outdated-no-au="Tue, 31 Dec 2099 23:59:59 GMT"
 
 exit

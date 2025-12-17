@@ -10,7 +10,18 @@
     "theme": {
       "color_scheme": 1,
       "user_color": "#1a1a1a",
-      "system_theme": 1
+      "system_theme": 1,
+      "colors": {
+        "frame": "#2d1a1a",
+        "toolbar": "#1a1a1a",
+        "tab_text": "#e8d4b0",
+        "tab_background_text": "#d4a574",
+        "bookmark_text": "#e8d4b0",
+        "ntp_background": "#1a0f0f",
+        "ntp_text": "#e8d4b0",
+        "ntp_link": "#d4a574",
+        "button_background": "#4a4a4a"
+      }
     }
   },
   "bookmark_bar": {
